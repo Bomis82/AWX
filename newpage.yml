@@ -8,7 +8,11 @@
     file:
       path: /usr/share/nginx/html/index.html
       state: absent
-  - name: create new index
+  - name: Create an empty file
+    file:
+      path: /usr/share/nginx/html/index.html
+      state: touch
+  - name: update content
     file:
       path: /usr/share/nginx/html/index.html
       content: |
