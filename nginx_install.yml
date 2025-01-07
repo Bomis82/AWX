@@ -13,12 +13,12 @@
     yum:
       name: nginx
       state: present
-
+      
   - name: Insert Index Page
-    template:
-      src: index.html
-      dest: /usr/share/nginx/html/index.html
-
+    file:
+      path: /usr/share/nginx/html/index.html
+      content: |
+        testy1
   - name: Start NGiNX
     service:
       name: nginx
