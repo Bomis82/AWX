@@ -18,7 +18,7 @@
     file:
       path: /usr/share/nginx/html/index.html
       content: |
-        testy1
+        New ngnx!
   - name: Start NGiNX
     service:
       name: nginx
