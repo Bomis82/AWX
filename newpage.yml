@@ -4,7 +4,11 @@
   become: true
 
   tasks:
-  - name: Insert Index Page
+  - name: delete old index
+    file:
+      path: /usr/share/nginx/html/index.html
+      state: absent
+  - name: create new index
     file:
       path: /usr/share/nginx/html/index.html
       content: |
