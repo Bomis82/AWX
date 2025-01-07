@@ -1,0 +1,11 @@
+---
+- name: Update index
+  hosts: all
+  become: true
+
+  tasks:
+  - name: Insert Index Page
+    file:
+      path: /usr/share/nginx/html/index.html
+      content: |
+        New ngnx!
