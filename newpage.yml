@@ -12,5 +12,4 @@
   - name: Create and update content
     copy:
       dest: /usr/share/nginx/html/index.html
-      content: |
-        testy
+      content: "{{ index_content }}"
